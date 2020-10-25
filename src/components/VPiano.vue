@@ -39,8 +39,6 @@
 //import { GiphyFetch } from '@giphy/js-fetch-api'
 //const gf = new GiphyFetch('hoc7Xw81iwUP2iewXhekupQznVmYDlHK')
 
-//const fetchGifs = (offset: number) => gf.trending({ offset, limit: 10 })*/
-
 export default {
 
   methods: {
