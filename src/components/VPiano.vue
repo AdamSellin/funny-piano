@@ -5,7 +5,7 @@
           <div class="title mx-auto mt-8 mb-8">
             <h1 class="text_title">The emoji piano</h1>
           </div>
-          <div class="Piano inset-x-0 bottom-0 mx-auto mb-24">
+          <div class="Piano inset-x-0 bottom-0 mx-auto mb-24 sm:h-auto">
                   <div class="rectangle17">
                     <div  tabindex="1" id="do" class="rectangle4" v-on:click="playDo()"></div>
                     <div tabindex="2" id="re" class="rectangle5" v-on:click="playRe()"></div>

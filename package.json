@@ -19,7 +19,8 @@
     "react-async-hook": "^3.6.2",
     "vue": "^2.6.12",
     "vue-audio": "0.0.12",
-    "vue-howler": "^0.7.0"
+    "vue-howler": "^0.7.0",
+    "vue-mousetrap": "^1.0.2"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
