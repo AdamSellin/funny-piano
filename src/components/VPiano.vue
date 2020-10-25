@@ -58,7 +58,6 @@ export default {
       setTimeout(function(){
       document.getElementById("do").style.background =  "#FFFFFF";
       }, 400);
-
     },
 
     async playRe () {
@@ -80,7 +79,6 @@ export default {
       setTimeout(function(){
       document.getElementById("re").style.background =  "#FFFFFF";
       }, 400);
-
     },
 
     async playMi () {
