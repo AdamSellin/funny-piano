@@ -1,7 +1,7 @@
 <template>
   <div class="Home bg-gradient-to-r from-orange-400 via-red-500 to-pink-500 h-screen">
     <div class="container">
-          <img id="emoji" class="Gif mx-auto mt-32">
+          <img id="emoji" class="Gif mx-auto mt-32" src="https://urlz.fr/e5H3">
           <div class="title mx-auto mt-8 mb-8">
             <h1 class="text_title">The emoji piano</h1>
           </div>
@@ -30,7 +30,6 @@
                     <div id="noteSi" class="note7">SI</div>
                   </div>
             </div>
-
     </div>
   </div>
 </template>
@@ -45,20 +44,25 @@
 export default {
 
   methods: {
-   playDo () {
+   async playDo () {
       const audio = document.createElement('audio')
             audio.src = require("../../public/assets/sounds/C.mp3")
 
             audio.play()
 
       const img = document.querySelector('img');
-        fetch('https://api.giphy.com/v1/gifs/random?api_key=hoc7Xw81iwUP2iewXhekupQznVmYDlHK&username=Emoji', {mode: 'cors'})
+       /* fetch('https://api.giphy.com/v1/gifs/random?api_key=hoc7Xw81iwUP2iewXhekupQznVmYDlHK&username=Emoji', {mode: 'cors'})
         .then(function(response) {
       return response.json();
       })
         .then(function(response) {
         img.src = response.data.images.original.url;
-      });
+      });*/
+
+      const response = await fetch('https://api.giphy.com/v1/gifs/random?api_key=hoc7Xw81iwUP2iewXhekupQznVmYDlHK&username=Emoji', {mode: 'cors'});
+      const catData = await response.json();
+      img.src = catData.data.images.original.url;
+
 
       document.getElementById("do").style.background = "#FFD12D";
       document.getElementById("noteDo").style.color= "#FFFFFF";
@@ -71,47 +75,38 @@ export default {
 
     },
 
-    playRe () {
+    async playRe () {
       const audio = document.createElement('audio')
             audio.src = require("../../public/assets/sounds/D.mp3")
 
             audio.play()
 
       const img = document.querySelector('img');
-        fetch('https://api.giphy.com/v1/gifs/random?api_key=hoc7Xw81iwUP2iewXhekupQznVmYDlHK&username=Emoji', {mode: 'cors'})
-    .then(function(response) {
-      return response.json();
-    })
-    .then(function(response) {
-      img.src = response.data.images.original.url;
-    });
-      //img.setAttribute("src", "https://media.giphy.com/media/DQ100zzcakfBe/giphy.gif");
+      const response = await fetch('https://api.giphy.com/v1/gifs/random?api_key=hoc7Xw81iwUP2iewXhekupQznVmYDlHK&username=Emoji', {mode: 'cors'});
+      const catData = await response.json();
+      img.src = catData.data.images.original.url;
 
       document.getElementById("re").style.background = "#FFD12D";
       document.getElementById("noteRe").style.color= "#FFFFFF";
-       setTimeout(function(){
-         document.getElementById("noteRe").style.color =  "rgba(255, 255, 255, 0.4)";
-   }, 400);
-   setTimeout(function(){
-         document.getElementById("re").style.background =  "#FFFFFF";
-   }, 400);
+      setTimeout(function(){
+      document.getElementById("noteRe").style.color =  "rgba(255, 255, 255, 0.4)";
+      }, 400);
+      setTimeout(function(){
+      document.getElementById("re").style.background =  "#FFFFFF";
+      }, 400);
 
     },
 
-    playMi () {
+    async playMi () {
       const audio = document.createElement('audio')
             audio.src = require("../../public/assets/sounds/E.mp3")
 
             audio.play()
 
       const img = document.querySelector('img');
-        fetch('https://api.giphy.com/v1/gifs/random?api_key=hoc7Xw81iwUP2iewXhekupQznVmYDlHK&username=Emoji', {mode: 'cors'})
-        .then(function(response) {
-      return response.json();
-      })
-        .then(function(response) {
-        img.src = response.data.images.original.url;
-      });
+      const response = await fetch('https://api.giphy.com/v1/gifs/random?api_key=hoc7Xw81iwUP2iewXhekupQznVmYDlHK&username=Emoji', {mode: 'cors'});
+      const catData = await response.json();
+      img.src = catData.data.images.original.url;
 
       document.getElementById("mi").style.background = "#FFD12D";
       document.getElementById("noteMi").style.color= "#FFFFFF";
@@ -123,20 +118,16 @@ export default {
       }, 400);
     },
 
-    playFa () {
+    async playFa () {
       const audio = document.createElement('audio')
             audio.src = require("../../public/assets/sounds/F.mp3")
 
             audio.play()
 
       const img = document.querySelector('img');
-        fetch('https://api.giphy.com/v1/gifs/random?api_key=hoc7Xw81iwUP2iewXhekupQznVmYDlHK&username=Emoji', {mode: 'cors'})
-        .then(function(response) {
-      return response.json();
-      })
-        .then(function(response) {
-        img.src = response.data.images.original.url;
-      });
+      const response = await fetch('https://api.giphy.com/v1/gifs/random?api_key=hoc7Xw81iwUP2iewXhekupQznVmYDlHK&username=Emoji', {mode: 'cors'});
+      const catData = await response.json();
+      img.src = catData.data.images.original.url;
 
       document.getElementById("fa").style.background = "#FFD12D";
       document.getElementById("noteFa").style.color= "#FFFFFF";
@@ -148,20 +139,16 @@ export default {
       }, 400);
     },
 
-    playSol () {
+    async playSol () {
       const audio = document.createElement('audio')
             audio.src = require("../../public/assets/sounds/G.mp3")
 
             audio.play()
 
       const img = document.querySelector('img');
-        fetch('https://api.giphy.com/v1/gifs/random?api_key=hoc7Xw81iwUP2iewXhekupQznVmYDlHK&username=Emoji', {mode: 'cors'})
-        .then(function(response) {
-      return response.json();
-      })
-        .then(function(response) {
-        img.src = response.data.images.original.url;
-      });
+      const response = await fetch('https://api.giphy.com/v1/gifs/random?api_key=hoc7Xw81iwUP2iewXhekupQznVmYDlHK&username=Emoji', {mode: 'cors'});
+      const catData = await response.json();
+      img.src = catData.data.images.original.url;
 
       document.getElementById("sol").style.background = "#FFD12D";
       document.getElementById("noteSol").style.color= "#FFFFFF";
@@ -173,20 +160,16 @@ export default {
       }, 400);
     },
 
-    playLa () {
+    async playLa () {
       const audio = document.createElement('audio')
             audio.src = require("../../public/assets/sounds/A.mp3")
 
             audio.play()
 
       const img = document.querySelector('img');
-        fetch('https://api.giphy.com/v1/gifs/random?api_key=hoc7Xw81iwUP2iewXhekupQznVmYDlHK&username=Emoji', {mode: 'cors'})
-        .then(function(response) {
-      return response.json();
-      })
-        .then(function(response) {
-        img.src = response.data.images.original.url;
-      });
+      const response = await fetch('https://api.giphy.com/v1/gifs/random?api_key=hoc7Xw81iwUP2iewXhekupQznVmYDlHK&username=Emoji', {mode: 'cors'});
+      const catData = await response.json();
+      img.src = catData.data.images.original.url;
 
       document.getElementById("la").style.background = "#FFD12D";
       document.getElementById("noteLa").style.color= "#FFFFFF";
@@ -198,20 +181,16 @@ export default {
       }, 400);
     },
 
-    playSi () {
+    async playSi () {
       const audio = document.createElement('audio')
             audio.src = require("../../public/assets/sounds/B.mp3")
 
             audio.play()
 
       const img = document.querySelector('img');
-        fetch('https://api.giphy.com/v1/gifs/random?api_key=hoc7Xw81iwUP2iewXhekupQznVmYDlHK&username=Emoji', {mode: 'cors'})
-        .then(function(response) {
-      return response.json();
-      })
-        .then(function(response) {
-        img.src = response.data.images.original.url;
-      });
+      const response = await fetch('https://api.giphy.com/v1/gifs/random?api_key=hoc7Xw81iwUP2iewXhekupQznVmYDlHK&username=Emoji', {mode: 'cors'});
+      const catData = await response.json();
+      img.src = catData.data.images.original.url;
 
       document.getElementById("si").style.background = "#FFD12D";
       document.getElementById("noteSi").style.color= "#FFFFFF";
@@ -223,20 +202,16 @@ export default {
       }, 400);
     },
 
-    playRe2 () {
+    async playRe2 () {
       const audio = document.createElement('audio')
             audio.src = require("../../public/assets/sounds/D#.mp3")
 
             audio.play()
 
       const img = document.querySelector('img');
-        fetch('https://api.giphy.com/v1/gifs/random?api_key=hoc7Xw81iwUP2iewXhekupQznVmYDlHK&username=Emoji', {mode: 'cors'})
-        .then(function(response) {
-      return response.json();
-      })
-        .then(function(response) {
-        img.src = response.data.images.original.url;
-      });
+      const response = await fetch('https://api.giphy.com/v1/gifs/random?api_key=hoc7Xw81iwUP2iewXhekupQznVmYDlHK&username=Emoji', {mode: 'cors'});
+      const catData = await response.json();
+      img.src = catData.data.images.original.url;
 
       document.getElementById("re2").style.background = "#E6016F";
       setTimeout(function(){
@@ -244,20 +219,16 @@ export default {
       }, 400);
     },
 
-    playMi2 () {
+    async playMi2 () {
       const audio = document.createElement('audio')
             audio.src = require("../../public/assets/sounds/D#.mp3")
 
             audio.play()
 
       const img = document.querySelector('img');
-        fetch('https://api.giphy.com/v1/gifs/random?api_key=hoc7Xw81iwUP2iewXhekupQznVmYDlHK&username=Emoji', {mode: 'cors'})
-        .then(function(response) {
-      return response.json();
-      })
-        .then(function(response) {
-        img.src = response.data.images.original.url;
-      });
+      const response = await fetch('https://api.giphy.com/v1/gifs/random?api_key=hoc7Xw81iwUP2iewXhekupQznVmYDlHK&username=Emoji', {mode: 'cors'});
+      const catData = await response.json();
+      img.src = catData.data.images.original.url;
 
       document.getElementById("mi2").style.background = "#E6016F";
       setTimeout(function(){
@@ -265,20 +236,16 @@ export default {
       }, 400);
     },
 
-    playSol2 () {
+    async playSol2 () {
       const audio = document.createElement('audio')
             audio.src = require("../../public/assets/sounds/D#.mp3")
 
             audio.play()
 
       const img = document.querySelector('img');
-        fetch('https://api.giphy.com/v1/gifs/random?api_key=hoc7Xw81iwUP2iewXhekupQznVmYDlHK&username=Emoji', {mode: 'cors'})
-        .then(function(response) {
-      return response.json();
-      })
-        .then(function(response) {
-        img.src = response.data.images.original.url;
-      });
+      const response = await fetch('https://api.giphy.com/v1/gifs/random?api_key=hoc7Xw81iwUP2iewXhekupQznVmYDlHK&username=Emoji', {mode: 'cors'});
+      const catData = await response.json();
+      img.src = catData.data.images.original.url;
 
       document.getElementById("sol2").style.background = "#E6016F";
       setTimeout(function(){
@@ -286,20 +253,16 @@ export default {
       }, 400);
     },
 
-    playSi2 () {
+    async playSi2 () {
       const audio = document.createElement('audio')
             audio.src = require("../../public/assets/sounds/D#.mp3")
 
             audio.play()
 
       const img = document.querySelector('img');
-        fetch('https://api.giphy.com/v1/gifs/random?api_key=hoc7Xw81iwUP2iewXhekupQznVmYDlHK&username=Emoji', {mode: 'cors'})
-        .then(function(response) {
-      return response.json();
-      })
-        .then(function(response) {
-        img.src = response.data.images.original.url;
-      });
+      const response = await fetch('https://api.giphy.com/v1/gifs/random?api_key=hoc7Xw81iwUP2iewXhekupQznVmYDlHK&username=Emoji', {mode: 'cors'});
+      const catData = await response.json();
+      img.src = catData.data.images.original.url;
 
       document.getElementById("si2").style.background = "#E6016F";
       setTimeout(function(){
@@ -307,20 +270,16 @@ export default {
       }, 400);
     },
 
-    playDo2 () {
+    async playDo2 () {
       const audio = document.createElement('audio')
             audio.src = require("../../public/assets/sounds/D#.mp3")
 
             audio.play()
 
       const img = document.querySelector('img');
-        fetch('https://api.giphy.com/v1/gifs/random?api_key=hoc7Xw81iwUP2iewXhekupQznVmYDlHK&username=Emoji', {mode: 'cors'})
-        .then(function(response) {
-      return response.json();
-      })
-        .then(function(response) {
-        img.src = response.data.images.original.url;
-      });
+      const response = await fetch('https://api.giphy.com/v1/gifs/random?api_key=hoc7Xw81iwUP2iewXhekupQznVmYDlHK&username=Emoji', {mode: 'cors'});
+      const catData = await response.json();
+      img.src = catData.data.images.original.url;
 
       document.getElementById("do2").style.background = "#E6016F";
       setTimeout(function(){
@@ -689,8 +648,6 @@ export default {
   position: absolute;
   width: 200px;
   height: 200px;
-  /*left: 620px;
-  top: 129px;*/
   left: 0%;
   right: 0%;
   bottom: 0%;
