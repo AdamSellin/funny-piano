@@ -10,7 +10,7 @@
   export default {
     methods: {
      ChangeGif() {
-  const [gif, setGif] = useState<IGif | null>(null);
+  //const [gif, setGif] = useState<IGif | null>(null);
   useAsync(async () => {
     const { data: gifs } = await gf.emoji()
     const { data } = await gf.random({ tag: 'emoj', type: 'stickers' })

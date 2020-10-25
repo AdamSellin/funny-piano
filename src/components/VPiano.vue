@@ -1,7 +1,7 @@
 <template>
   <div class="Home bg-gradient-to-r from-orange-400 via-red-500 to-pink-500 h-screen">
     <div class="container">
-          <img id="emoji" class="Gif mx-auto mt-32"  src="" alt="">
+          <img id="emoji" class="Gif mx-auto mt-32">
           <div class="title mx-auto mt-8 mb-8">
             <h1 class="text_title">The emoji piano</h1>
           </div>
@@ -18,7 +18,7 @@
                     <div tabindex="9" id="mi2" class="rectangle13" v-on:click="playMi2()"></div>
                     <div tabindex="10" id="sol2" class="rectangle14" v-on:click="playSol2()"></div>
                     <div tabindex="11" id="si2" class="rectangle15" v-on:click="playSi2()"></div>
-                    <div tabindex="12" id="do" class="rectangle16" v-on:click="playDo2()"></div>
+                    <div tabindex="12" id="do2" class="rectangle16" v-on:click="playDo2()"></div>
                   </div>
                   <div class="note">
                     <div id="noteDo" class="note1">DO</div>
@@ -238,16 +238,95 @@ export default {
         img.src = response.data.images.original.url;
       });
 
-      document.getElementById("de2").style.background = "#E6016F";
-      document.getElementById("noteRe").style.color= "#FFFFFF";
+      document.getElementById("re2").style.background = "#E6016F";
       setTimeout(function(){
-      document.getElementById("noteRe").style.color =  "rgba(255, 255, 255, 0.4)";
+      document.getElementById("re2").style.background =  "#000000";
       }, 400);
+    },
+
+    playMi2 () {
+      const audio = document.createElement('audio')
+            audio.src = require("../../public/assets/sounds/D#.mp3")
+
+            audio.play()
+
+      const img = document.querySelector('img');
+        fetch('https://api.giphy.com/v1/gifs/random?api_key=hoc7Xw81iwUP2iewXhekupQznVmYDlHK&username=Emoji', {mode: 'cors'})
+        .then(function(response) {
+      return response.json();
+      })
+        .then(function(response) {
+        img.src = response.data.images.original.url;
+      });
+
+      document.getElementById("mi2").style.background = "#E6016F";
       setTimeout(function(){
-      document.getElementById("de2").style.background =  "#000000";
+      document.getElementById("mi2").style.background =  "#000000";
+      }, 400);
+    },
+
+    playSol2 () {
+      const audio = document.createElement('audio')
+            audio.src = require("../../public/assets/sounds/D#.mp3")
+
+            audio.play()
+
+      const img = document.querySelector('img');
+        fetch('https://api.giphy.com/v1/gifs/random?api_key=hoc7Xw81iwUP2iewXhekupQznVmYDlHK&username=Emoji', {mode: 'cors'})
+        .then(function(response) {
+      return response.json();
+      })
+        .then(function(response) {
+        img.src = response.data.images.original.url;
+      });
+
+      document.getElementById("sol2").style.background = "#E6016F";
+      setTimeout(function(){
+      document.getElementById("sol2").style.background =  "#000000";
+      }, 400);
+    },
+
+    playSi2 () {
+      const audio = document.createElement('audio')
+            audio.src = require("../../public/assets/sounds/D#.mp3")
+
+            audio.play()
+
+      const img = document.querySelector('img');
+        fetch('https://api.giphy.com/v1/gifs/random?api_key=hoc7Xw81iwUP2iewXhekupQznVmYDlHK&username=Emoji', {mode: 'cors'})
+        .then(function(response) {
+      return response.json();
+      })
+        .then(function(response) {
+        img.src = response.data.images.original.url;
+      });
+
+      document.getElementById("si2").style.background = "#E6016F";
+      setTimeout(function(){
+      document.getElementById("si2").style.background =  "#000000";
+      }, 400);
+    },
+
+    playDo2 () {
+      const audio = document.createElement('audio')
+            audio.src = require("../../public/assets/sounds/D#.mp3")
+
+            audio.play()
+
+      const img = document.querySelector('img');
+        fetch('https://api.giphy.com/v1/gifs/random?api_key=hoc7Xw81iwUP2iewXhekupQznVmYDlHK&username=Emoji', {mode: 'cors'})
+        .then(function(response) {
+      return response.json();
+      })
+        .then(function(response) {
+        img.src = response.data.images.original.url;
+      });
+
+      document.getElementById("do2").style.background = "#E6016F";
+      setTimeout(function(){
+      document.getElementById("do2").style.background =  "#000000";
       }, 400);
     }
-
 
   }
 }
@@ -424,10 +503,6 @@ export default {
   border-radius: 0px 0px 5px 5px;
 }
 
-.rectangle12:focus {
-    background-color:#E6016F;
-}
-
 .rectangle13 {
   /* Rectangle 13 */
 
@@ -439,10 +514,6 @@ export default {
 
   background: #000000;
   border-radius: 0px 0px 5px 5px;
-}
-
-.rectangle13:focus {
-    background-color:#E6016F;
 }
 
 .rectangle14 {
@@ -457,10 +528,6 @@ export default {
   border-radius: 0px 0px 5px 5px;
 }
 
-.rectangle14:focus {
-    background-color:#E6016F;
-}
-
 .rectangle15 {
   /* Rectangle 15 */
   position: absolute;
@@ -471,10 +538,6 @@ export default {
 
   background: #000000;
   border-radius: 0px 0px 5px 5px;
-}
-
-.rectangle15:focus {
-    background-color:#E6016F;
 }
 
 .rectangle16 {
@@ -488,10 +551,6 @@ export default {
   background: #000000;
   mix-blend-mode: normal;
   border-radius: 0px 0px 5px 5px;
-}
-
-.rectangle16:focus {
-    background-color:#E6016F;
 }
 
 .note {
