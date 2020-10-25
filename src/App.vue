@@ -1,7 +1,6 @@
 <template>
   <div id="app">
     <VPiano />
-   <!-- <VEmoji />-->
   </div>
 </template>
 
@@ -15,13 +14,11 @@ Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
 
 import VPiano from "./components/VPiano";
-//import VEmoji from "./components/VEmoji";
 
 export default {
   name: 'App',
   components: {
     VPiano
-    //VEmoji
   }
 }
 </script>
