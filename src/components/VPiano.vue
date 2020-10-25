@@ -35,10 +35,6 @@
 </template>
 
 <script>
-//import { Grid } from '@giphy/react-components'
-//import { GiphyFetch } from '@giphy/js-fetch-api'
-//const gf = new GiphyFetch('hoc7Xw81iwUP2iewXhekupQznVmYDlHK')
-
 export default {
 
   methods: {
