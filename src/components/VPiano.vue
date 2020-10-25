@@ -51,14 +51,6 @@ export default {
             audio.play()
 
       const img = document.querySelector('img');
-       /* fetch('https://api.giphy.com/v1/gifs/random?api_key=hoc7Xw81iwUP2iewXhekupQznVmYDlHK&username=Emoji', {mode: 'cors'})
-        .then(function(response) {
-      return response.json();
-      })
-        .then(function(response) {
-        img.src = response.data.images.original.url;
-      });*/
-
       const response = await fetch('https://api.giphy.com/v1/gifs/random?api_key=hoc7Xw81iwUP2iewXhekupQznVmYDlHK&username=Emoji', {mode: 'cors'});
       const catData = await response.json();
       img.src = catData.data.images.original.url;
@@ -204,7 +196,7 @@ export default {
 
     async playRe2 () {
       const audio = document.createElement('audio')
-            audio.src = require("../../public/assets/sounds/D#.mp3")
+            audio.src = require("../../public/assets/sounds/D2.mp3")
 
             audio.play()
 
@@ -221,7 +213,7 @@ export default {
 
     async playMi2 () {
       const audio = document.createElement('audio')
-            audio.src = require("../../public/assets/sounds/D#.mp3")
+            audio.src = require("../../public/assets/sounds/A2.mp3")
 
             audio.play()
 
@@ -238,7 +230,7 @@ export default {
 
     async playSol2 () {
       const audio = document.createElement('audio')
-            audio.src = require("../../public/assets/sounds/D#.mp3")
+            audio.src = require("../../public/assets/sounds/G2.mp3")
 
             audio.play()
 
@@ -255,7 +247,7 @@ export default {
 
     async playSi2 () {
       const audio = document.createElement('audio')
-            audio.src = require("../../public/assets/sounds/D#.mp3")
+            audio.src = require("../../public/assets/sounds/F2.mp3")
 
             audio.play()
 
@@ -272,7 +264,7 @@ export default {
 
     async playDo2 () {
       const audio = document.createElement('audio')
-            audio.src = require("../../public/assets/sounds/D#.mp3")
+            audio.src = require("../../public/assets/sounds/C2.mp3")
 
             audio.play()
 
@@ -297,9 +289,6 @@ export default {
 
 .Home {
   position: relative;
-  /*width: ;
-  height: 768px;
-  background: linear-gradient(135deg, #FF9D6C 0%, #BB4E75 100%);*/
 }
 
 .title {
