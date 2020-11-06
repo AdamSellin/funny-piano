@@ -1,7 +1,7 @@
 <template>
   <div class="Home bg-gradient-to-r from-orange-400 via-red-500 to-pink-500 h-screen">
     <div class="container">
-          <img id="emoji" class="Gif mx-auto mt-32" src="https://urlz.fr/e5H3">
+          <img id="emoji" class="Gif mx-auto mt-32" src="https://images.squarespace-cdn.com/content/v1/58daa78cff7c5087dfdb6b27/1561757659847-4J08SKPFIRKJ77NPBM19/ke17ZwdGBToddI8pDm48kBOU4qEwlNfMOAq4sqn8VJlZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpxDdVJ0IjBcScdUygxNEVI8AmTqOI38FCS3PNapP4lGGybTopH_vwUf1k5ZznFQK2Q/vide.png">
           <div class="title mx-auto mt-8 mb-8">
             <h1 class="text_title">The emoji piano</h1>
           </div>
@@ -35,6 +35,7 @@
 </template>
 
 <script>
+
 export default {
 
   methods: {
