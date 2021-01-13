@@ -5,10 +5,10 @@ Les consignes sont dans le wiki.
 
 ## Installation
 ```
-npm install
+yarn install
 ```
 
 ### Development
 ```
-npm run serve
+yarn run serve
 ```
